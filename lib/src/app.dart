@@ -1,9 +1,9 @@
+import 'package:charity_finder/src/components/components_list_view.dart';
+import 'package:charity_finder/src/components/pages/button_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'sample_feature/sample_item_details_view.dart';
-import 'sample_feature/sample_item_list_view.dart';
 import 'settings/settings_controller.dart';
 import 'settings/settings_view.dart';
 
@@ -31,6 +31,8 @@ class MyApp extends StatelessWidget {
           // returns to the app after it has been killed while running in the
           // background.
           restorationScopeId: 'app',
+
+          debugShowCheckedModeBanner: false,
 
           // Provide the generated AppLocalizations to the MaterialApp. This
           // allows descendant Widgets to display the correct translations
@@ -75,11 +77,11 @@ class MyApp extends StatelessWidget {
                 switch (routeSettings.name) {
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
-                  case SampleItemDetailsView.routeName:
-                    return const SampleItemDetailsView();
-                  case SampleItemListView.routeName:
+                  case ButtonDetailPage.routeName:
+                    return const ButtonDetailPage();
+                  case ComponentsListView.routeName:
                   default:
-                    return const SampleItemListView();
+                    return const ComponentsListView();
                 }
               },
             );
