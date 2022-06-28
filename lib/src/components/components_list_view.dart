@@ -1,4 +1,5 @@
 import 'package:charity_finder/src/components/pages/button_detail_page.dart';
+import 'package:charity_finder/src/components/pages/image_text_page.dart';
 import 'package:flutter/material.dart';
 
 /// Displays a list of SampleItems.
@@ -26,6 +27,14 @@ class ComponentsListView extends StatelessWidget {
             },
           ),
           const Divider(),
+          ListTile(
+            title: const Text('Mateus'),
+            subtitle: const Text('ImageText'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () {
+              Navigator.of(context).pushNamed(ImageTextPage.routeName);
+            },
+          ),
         ],
       ),
     );
