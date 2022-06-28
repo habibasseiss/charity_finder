@@ -32,6 +32,7 @@ class ComponentsListView extends StatelessWidget {
             onPressed: () {
               print('teste');
             },
+            backgroundColor: Colors.grey,
             title: 'Button',
           ),
         ],

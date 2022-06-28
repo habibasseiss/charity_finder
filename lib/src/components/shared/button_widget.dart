@@ -5,10 +5,10 @@ import 'package:flutter/src/widgets/framework.dart';
 class ButtonWidget extends StatefulWidget {
   final Function onPressed;
   final String title;
-  Color? backgroundColor;
-  double borderRadiusValue;
+  final Color? backgroundColor;
+  final double borderRadiusValue;
 
-  ButtonWidget({
+  const ButtonWidget({
     super.key,
     required this.onPressed,
     required this.title,
@@ -27,14 +27,16 @@ class _ButtonWidgetState extends State<ButtonWidget> {
       margin: const EdgeInsets.symmetric(horizontal: 20),
       child: ElevatedButton(
         onPressed: () => widget.onPressed(),
-        style: ButtonStyle(
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        style: ElevatedButton.styleFrom(
+          primary: widget.backgroundColor, 
+          onPrimary: widget.backgroundColor != null? widget.backgroundColor!.withOpacity(0.1): null,
+          elevation: 2,
+          animationDuration: const Duration(seconds: 2),
+          ).copyWith(shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(widget.borderRadiusValue),
             ),
-          ),
-          backgroundColor: MaterialStateProperty.all(widget.backgroundColor),
-        ),
+          ),),
         child: Padding(
           padding: const EdgeInsets.only(left: 10.0, top: 8.0, bottom: 8.0),
           child: Row(
@@ -42,11 +44,12 @@ class _ButtonWidgetState extends State<ButtonWidget> {
             children: [
               Text(
                 widget.title,
-                style: const TextStyle(fontSize: 24),
+                style: const TextStyle(fontSize: 24, color: Colors.black),
               ),
               const Icon(
                 Icons.chevron_right,
                 size: 50,
+                color: Colors.black,
               ),
             ],
           ),
