@@ -1,6 +1,8 @@
 import 'package:charity_finder/src/components/pages/button_detail_page.dart';
 import 'package:flutter/material.dart';
 
+import 'shared/button_widget.dart';
+
 /// Displays a list of SampleItems.
 class ComponentsListView extends StatelessWidget {
   const ComponentsListView({
@@ -26,6 +28,12 @@ class ComponentsListView extends StatelessWidget {
             },
           ),
           const Divider(),
+          ButtonWidget(
+            onPressed: () {
+              print('teste');
+            },
+            title: 'Button',
+          ),
         ],
       ),
     );
