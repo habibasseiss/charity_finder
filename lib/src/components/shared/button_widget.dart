@@ -6,12 +6,14 @@ class ButtonWidget extends StatefulWidget {
   final Function onPressed;
   final String title;
   final Color? backgroundColor;
+  final Color textColor;
   final double borderRadiusValue;
 
   const ButtonWidget({
     super.key,
     required this.onPressed,
     required this.title,
+    this.textColor = Colors.black,
     this.backgroundColor,
     this.borderRadiusValue = 8.0,
   });
@@ -44,12 +46,12 @@ class _ButtonWidgetState extends State<ButtonWidget> {
             children: [
               Text(
                 widget.title,
-                style: const TextStyle(fontSize: 24, color: Colors.black),
+                style: TextStyle(fontSize: 24, color: widget.textColor),
               ),
-              const Icon(
+              Icon(
                 Icons.chevron_right,
                 size: 50,
-                color: Colors.black,
+                color: widget.textColor,
               ),
             ],
           ),
