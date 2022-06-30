@@ -1,3 +1,4 @@
+import 'package:charity_finder/src/components/carousel/carousel_page.dart';
 import 'package:charity_finder/src/components/components_list_view.dart';
 import 'package:charity_finder/src/components/pages/button_detail_page.dart';
 import 'package:flutter/material.dart';
@@ -79,6 +80,8 @@ class MyApp extends StatelessWidget {
                     return SettingsView(controller: settingsController);
                   case ButtonDetailPage.routeName:
                     return const ButtonDetailPage();
+                  case CarouselPage.routeName:
+                    return const CarouselPage();
                   case ComponentsListView.routeName:
                   default:
                     return const ComponentsListView();
