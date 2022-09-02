@@ -1,5 +1,4 @@
 import 'package:charity_finder/features/onboarding/ui/pages/onboarding_page.dart';
-import 'package:charity_finder/src/components/pages/button_detail_page.dart';
 import 'package:charity_finder/src/components/pages/image_text_page.dart';
 import 'package:charity_finder/src/components/pages/large_image_text_page.dart';
 import 'package:flutter/material.dart';
@@ -23,14 +22,6 @@ class ComponentsListView extends StatelessWidget {
           const ListTile(
             title: Text('Componentes'),
             enabled: false,
-          ),
-          ListTile(
-            title: const Text('Botão'),
-            subtitle: const Text('Call To Action (CTA)'),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () {
-              Navigator.of(context).pushNamed(ButtonDetailPage.routeName);
-            },
           ),
           ListTile(
             title: const Text('Gechele'),

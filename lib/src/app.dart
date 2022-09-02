@@ -1,6 +1,5 @@
 import 'package:charity_finder/features/onboarding/ui/pages/onboarding_page.dart';
 import 'package:charity_finder/src/components/components_list_view.dart';
-import 'package:charity_finder/src/components/pages/button_detail_page.dart';
 import 'package:charity_finder/src/components/pages/image_text_page.dart';
 import 'package:charity_finder/src/components/pages/large_image_text_page.dart';
 import 'package:flutter/material.dart';
@@ -70,12 +69,11 @@ class MyApp extends StatelessWidget {
           builder: (BuildContext context) {
             switch (routeSettings.name) {
               // Pages
+
               case OnboardingPage.routeName:
                 return const OnboardingPage();
 
               // Component pages (temporary)
-              case ButtonDetailPage.routeName:
-                return const ButtonDetailPage();
 
               case LargeImageTextPage.routeName:
                 return const LargeImageTextPage();
