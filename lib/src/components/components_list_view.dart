@@ -1,4 +1,6 @@
 import 'package:charity_finder/src/components/pages/button_detail_page.dart';
+import 'package:charity_finder/src/components/pages/image_text_page.dart';
+import 'package:charity_finder/src/components/pages/large_image_text_page.dart';
 import 'package:flutter/material.dart';
 
 import 'shared/button_widget.dart';
@@ -35,6 +37,22 @@ class ComponentsListView extends StatelessWidget {
             title: 'Button',
             backgroundColor: Colors.grey,
             textColor: Colors.white,
+          ),
+          ListTile(
+            title: const Text('Gechele'),
+            subtitle: const Text('Call To Action (CTA)'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () {
+              Navigator.of(context).pushNamed(LargeImageTextPage.routeName);
+            },
+          ),
+          ListTile(
+            title: const Text('Mateus'),
+            subtitle: const Text('ImageText'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () {
+              Navigator.of(context).pushNamed(ImageTextPage.routeName);
+            },
           ),
         ],
       ),
