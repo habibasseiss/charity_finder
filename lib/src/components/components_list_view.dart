@@ -3,6 +3,8 @@ import 'package:charity_finder/src/components/pages/image_text_page.dart';
 import 'package:charity_finder/src/components/pages/large_image_text_page.dart';
 import 'package:flutter/material.dart';
 
+import 'shared/button_widget.dart';
+
 /// Displays a list of SampleItems.
 class ComponentsListView extends StatelessWidget {
   const ComponentsListView({
@@ -22,6 +24,15 @@ class ComponentsListView extends StatelessWidget {
           const ListTile(
             title: Text('Componentes'),
             enabled: false,
+          ),
+          const Divider(),
+          ButtonWidget(
+            onPressed: () {
+              print('teste');
+            },
+            title: 'Button',
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
           ),
           ListTile(
             title: const Text('Gechele'),
