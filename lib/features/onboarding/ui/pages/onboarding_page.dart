@@ -1,4 +1,4 @@
-import 'package:charity_finder/features/onboarding/ui/components/slideshow.dart';
+import 'package:charity_finder/features/onboarding/ui/components/carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -29,12 +29,9 @@ class OnboardingPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Expanded(
+            const Expanded(
               flex: 2,
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.80,
-                child: const Slideshow(),
-              ),
+              child: Carousel(),
             ),
             Flexible(
               flex: 1,
