@@ -1,3 +1,4 @@
+import 'package:charity_finder/features/dashboard/pages/dashboard_page.dart';
 import 'package:charity_finder/features/onboarding/ui/pages/onboarding_page.dart';
 import 'package:charity_finder/src/components/components_list_view.dart';
 import 'package:charity_finder/src/components/pages/image_text_page.dart';
@@ -69,9 +70,11 @@ class MyApp extends StatelessWidget {
           builder: (BuildContext context) {
             switch (routeSettings.name) {
               // Pages
-
               case OnboardingPage.routeName:
                 return const OnboardingPage();
+
+              case DashboardPage.routeName:
+                return const DashboardPage();
 
               // Component pages (temporary)
 
