@@ -4,6 +4,7 @@ import 'package:charity_finder/src/components/pages/image_text_page.dart';
 import 'package:charity_finder/src/components/pages/large_image_text_page.dart';
 import 'package:flutter/material.dart';
 
+import '../../features/dashboard/pages/dashboard_page.dart';
 import 'shared/button_widget.dart';
 
 /// Displays a list of SampleItems.
@@ -70,6 +71,14 @@ class ComponentsListView extends StatelessWidget {
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               Navigator.of(context).pushNamed(ListagemInstrucoesPage.routeName);
+            },
+          ),
+          ListTile(
+            title: const Text('Dashboard'),
+            subtitle: const Text('Página inicial do app'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () {
+              Navigator.of(context).pushNamed(DashboardPage.routeName);
             },
           ),
         ],
