@@ -1,3 +1,4 @@
+import 'package:charity_finder/features/listagem_instituicoes/ui/pages/listagem_instituicoes_page.dart';
 import 'package:charity_finder/features/onboarding/ui/pages/onboarding_page.dart';
 import 'package:charity_finder/src/components/pages/image_text_page.dart';
 import 'package:charity_finder/src/components/pages/large_image_text_page.dart';
@@ -62,6 +63,14 @@ class ComponentsListView extends StatelessWidget {
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               Navigator.of(context).pushNamed(OnboardingPage.routeName);
+            },
+          ),
+          ListTile(
+            title: const Text('Listagem de Intituições'),
+            subtitle: const Text('Mateus'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () {
+              Navigator.of(context).pushNamed(ListagemInstrucoesPage.routeName);
             },
           ),
           ListTile(

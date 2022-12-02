@@ -1,4 +1,5 @@
 import 'package:charity_finder/features/dashboard/pages/dashboard_page.dart';
+import 'package:charity_finder/features/listagem_instituicoes/ui/pages/listagem_instituicoes_page.dart';
 import 'package:charity_finder/features/onboarding/ui/pages/onboarding_page.dart';
 import 'package:charity_finder/src/components/components_list_view.dart';
 import 'package:charity_finder/src/components/pages/image_text_page.dart';
@@ -72,6 +73,9 @@ class MyApp extends StatelessWidget {
               // Pages
               case OnboardingPage.routeName:
                 return const OnboardingPage();
+
+              case ListagemInstrucoesPage.routeName:
+                return const ListagemInstrucoesPage();
 
               case DashboardPage.routeName:
                 return const DashboardPage();
